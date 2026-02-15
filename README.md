@@ -1,2 +1,84 @@
-# wangyansong.github.io
-this is a repository of a personal page
+# 个人网页部署指南
+
+这是一个使用 GitHub Pages 部署个人网页的简单指南。
+
+## 📁 文件说明
+
+- `index.html` - 网页主文件
+- `styles.css` - 样式文件
+
+## 🚀 部署到 GitHub Pages（推荐）
+
+### 方法一：通过 GitHub 网页界面（最简单）
+
+1. **登录 GitHub**
+   - 访问 https://github.com
+   - 登录你的账号（如果没有账号，先注册）
+
+2. **创建新仓库**
+   - 点击右上角 "+" → "New repository"
+   - 仓库名称填写：`wangyansong.github.io`（必须用这个格式：用户名.github.io）
+   - 设置为 Public（公开）
+   - 勾选 "Add a README file"（可选）
+   - 点击 "Create repository"
+
+3. **上传文件**
+   - 在仓库页面，点击 "uploading an existing file"
+   - 将 `index.html` 和 `styles.css` 拖拽上传
+   - 点击 "Commit changes"
+
+4. **启用 GitHub Pages**
+   - 在仓库页面，点击 "Settings"（设置）
+   - 左侧菜单找到 "Pages"
+   - Source 选择 "Deploy from a branch"
+   - Branch 选择 "main" 或 "master"，文件夹选择 "/ (root)"
+   - 点击 "Save"
+
+5. **访问你的网站**
+   - 等待 1-2 分钟，然后访问：`https://wangyansong.github.io`
+   - 如果显示 404，等待几分钟后再试
+
+### 方法二：使用 Git 命令行（适合熟悉 Git 的用户）
+
+```bash
+# 1. 初始化 git 仓库
+git init
+
+# 2. 添加文件
+git add index.html styles.css
+
+# 3. 提交
+git commit -m "Initial commit: Personal website"
+
+# 4. 在 GitHub 创建仓库后，添加远程仓库
+git remote add origin https://github.com/你的用户名/wangyansong.github.io.git
+
+# 5. 推送到 GitHub
+git branch -M main
+git push -u origin main
+```
+
+然后在 GitHub 仓库设置中启用 Pages（参考方法一的第4步）。
+
+## 📝 注意事项
+
+- 仓库名必须是 `用户名.github.io` 格式才能使用免费域名
+- 如果使用其他仓库名，网址会是 `用户名.github.io/仓库名`
+- 更新文件后，GitHub Pages 会自动更新（可能需要几分钟）
+
+## 🔗 你的网站地址
+
+部署完成后，你的网站地址将是：
+```
+https://wangyansong.github.io
+```
+
+## ✨ 后续更新
+
+更新网页内容后：
+- 如果通过网页上传：直接上传新文件覆盖即可
+- 如果使用 Git：`git add .` → `git commit -m "更新"` → `git push`
+
+---
+
+如有问题，可以查看 GitHub Pages 官方文档：https://docs.github.com/en/pages
